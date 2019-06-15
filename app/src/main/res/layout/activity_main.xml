@@ -6,24 +6,46 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         tools:context=".MainActivity">
+
+
     <LinearLayout
             android:orientation="horizontal"
             android:layout_width="match_parent"
             android:layout_height="match_parent">
+
+
         <TextView
-                android:text="Fizz"
+                android:text="@string/fizz"
                 android:layout_width="wrap_content"
-                android:layout_height="wrap_content" android:id="@+id/textView1" android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:id="@+id/textView1"
+                android:textColor="@color/textColor"
+                android:background="@color/oneViewColor"
+                android:layout_weight="1"
                 android:textSize="36sp"/>
+
+
         <TextView
-                android:text="Buzz"
+                android:text="@string/buzz"
                 android:layout_width="wrap_content"
-                android:layout_height="wrap_content" android:id="@+id/textView2" android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:id="@+id/textView2"
+                android:textColor="@color/textColor"
+                android:background="@color/twoViewColor"
+                android:layout_weight="1"
                 tools:textSize="36sp"/>
+
+
         <Button
-                android:text="swap"
+                android:text="@string/swap"
                 android:layout_width="wrap_content"
-                android:layout_height="wrap_content" android:id="@+id/button" android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:textColor="@color/textColor"
+                android:background="@color/buttonColor"
+                android:id="@+id/button"
+                android:layout_weight="1"
                 android:textSize="18sp"/>
+
+
     </LinearLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>
