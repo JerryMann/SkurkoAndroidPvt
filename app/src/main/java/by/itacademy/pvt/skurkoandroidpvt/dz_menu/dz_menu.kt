@@ -15,16 +15,16 @@ class DzMenu : Activity() {
         setContentView(R.layout.activity_menu)
 
         button1.setOnClickListener {
-            startDz(MainActivity())
+            startDz(MainActivity::class.java)
         }
 
         button2.setOnClickListener {
-            startDz(Dz1Activity())
+            startDz(Dz1Activity::class.java)
         }
     }
 
-    private fun startDz(activity: Activity) {
-        val intent = Intent(this, activity::class.java)
+    private fun <T> startDz(activity: Class<T>) where T: Activity {
+        val intent = Intent(this, activity)
         startActivity(intent)
     }
 
