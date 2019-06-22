@@ -1,6 +1,11 @@
 <resources>
-    <string name="app_name">SkurkoAndroidPvt</string>
+    <string name="app_name">AnotherNewProject</string>
+    <string name="Watch">Watch</string>
+    <string name="Push">Push</string>
+    <string name="Dzo">DZ0</string>
+    <string name="Dz1">DZ1</string>
     <string name="swap">Swap</string>
     <string name="fizz">Fizz</string>
     <string name="buzz">Buzz</string>
+    <string name="app_name">SkurkoAndroidPvt</string>
 </resources>

@@ -2,7 +2,18 @@
 <resources>
     <color name="colorPrimary">#008577</color>
     <color name="colorPrimaryDark">#00574B</color>
+    <color name="colorPrimaryBright">#996E1E</color>
     <color name="colorAccent">#D81B60</color>
+    <color name="colorMain">#A8E1EB</color>
+    <color name="colorGr">#8C9091</color>
+    <color name="light">#FFFFFF</color>
+    <color name="bloody">#AC1717</color>
+    <color name="tomato">#CE0A0A</color>
+    <color name="grass">#268D2A</color>
+    <color name="sunflower">#FFC107</color>
+    <color name="sea">#132BAF</color>
+    <color name="carrot">#F45236</color>
+    <color name="raspberries">#B9203A</color>
     <color name="textColor">#000000</color>
     <color name="buttonColor">#8F7878</color>
     <color name="oneViewColor">#668BBB</color>
