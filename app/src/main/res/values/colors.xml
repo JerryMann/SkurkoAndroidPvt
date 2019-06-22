@@ -23,4 +23,8 @@
     <color name="buttonColor">#8F7878</color>
     <color name="oneViewColor">#668BBB</color>
     <color name="twoViewColor">#B9C755</color>
+    <color name="edit_login">#28FFFFFF</color>
+    <color name="log_in">#3F9BC0</color>
+    <color name="forgot_login">#00111111</color>
+    <color name="create_acc">#D5B77F</color>
 </resources>

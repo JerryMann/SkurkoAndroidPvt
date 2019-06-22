@@ -7,4 +7,11 @@
     <string name="fizz">Fizz</string>
     <string name="buzz">Buzz</string>
     <string name="app_name">SkurkoAndroidPvt</string>
+    <string name="dz2classwork">DZ2ClassWork</string>
+    <string name="dz2">DZ2</string>
+    <string name="log_in">LOG IN</string>
+    <string name="forgot_your_username_password"><u>Forgot your username/password?</u></string>
+    <string name="create_account">CREATE ACCOUNT</string>
+    <string name="Password">Password</string>
+    <string name="Username">Username</string>
 </resources>

@@ -7,20 +7,22 @@
 
     <Button
         android:id="@+id/button1"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_margin="10dp"
-        android:background="@color/white"
-        android:text="@string/Dzo"
-        android:textSize="30sp" />
+        style="@style/MenuButton"
+        android:text="@string/Dzo" />
 
     <Button
         android:id="@+id/button2"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_margin="10dp"
-        android:background="@color/white"
-        android:text="@string/Dz1"
-        android:textSize="30sp" />
+        style="@style/MenuButton"
+        android:text="@string/Dz1" />
+
+    <Button
+        android:id="@+id/button3"
+        style="@style/MenuButton"
+        android:text="@string/dz2classwork" />
+
+    <Button
+        android:id="@+id/button4"
+        style="@style/MenuButton"
+        android:text="@string/dz2" />
 
 </LinearLayout>
