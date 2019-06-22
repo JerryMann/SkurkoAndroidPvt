@@ -12,7 +12,7 @@
             tools:ignore="GoogleAppIndexingWarning">
         <activity android:name=".Dz0activity"/>
         <activity android:name=".dz1.Dz1Activity"/>
-        <activity android:name=".dz_menu.DzMenu">
+        <activity android:name=".dzMenu.DzMenu">
           <intent-filter>
                 <action android:name="android.intent.action.MAIN"/>
 

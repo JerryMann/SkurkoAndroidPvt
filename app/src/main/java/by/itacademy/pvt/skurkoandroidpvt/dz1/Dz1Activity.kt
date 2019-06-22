@@ -9,5 +9,4 @@ class Dz1Activity : Activity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_dz1)
     }
-
 }
