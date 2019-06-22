@@ -14,4 +14,8 @@
     <color name="sea">#132BAF</color>
     <color name="carrot">#F45236</color>
     <color name="raspberries">#B9203A</color>
+    <color name="textColor">#000000</color>
+    <color name="buttonColor">#8F7878</color>
+    <color name="oneViewColor">#668BBB</color>
+    <color name="twoViewColor">#B9C755</color>
 </resources>

@@ -7,4 +7,5 @@
     <string name="swap">Swap</string>
     <string name="fizz">Fizz</string>
     <string name="buzz">Buzz</string>
+    <string name="app_name">SkurkoAndroidPvt</string>
 </resources>
