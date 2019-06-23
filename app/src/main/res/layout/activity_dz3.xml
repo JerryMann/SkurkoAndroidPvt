@@ -81,7 +81,7 @@
                         android:layout_width="0dp"
                         android:layout_weight="1"
                         android:layout_height="wrap_content"
-                        android:text="@string/_50"/>
+                        android:text="@string/_3"/>
                 <TextView
                         style="@style/ProfileNumbers"
                         android:id="@+id/following_number"
@@ -95,7 +95,7 @@
                         android:layout_width="0dp"
                         android:layout_weight="1"
                         android:layout_height="wrap_content"
-                        android:text="@string/_50"/>
+                        android:text="@string/_23"/>
             </LinearLayout>
 
             <LinearLayout

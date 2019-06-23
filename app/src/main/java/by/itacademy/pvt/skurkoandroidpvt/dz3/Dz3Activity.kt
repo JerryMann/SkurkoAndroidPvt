@@ -14,11 +14,11 @@ class Dz3Activity : Activity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_dz3)
 
-        val imageView = findViewById<ImageView>(R.id.image)
-        val url = R.string.url_sample
+        val imageView = findViewById<ImageView>(R.id.avatar)
+        val url = getString(R.string.url_sample)
 
         Picasso.get()
-            .load(url.toString())
+            .load(url)
             .transform(Circular())
             .into(imageView, object : Callback {
                 override fun onSuccess() {

@@ -1,27 +1,31 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:background="@color/colorMain"
-    android:orientation="vertical">
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:background="@color/colorMain"
+              android:orientation="vertical">
 
     <Button
-        android:id="@+id/button1"
-        style="@style/MenuButton"
-        android:text="@string/Dzo" />
+            android:id="@+id/button1"
+            style="@style/MenuButton"
+            android:text="@string/Dzo"/>
 
     <Button
-        android:id="@+id/button2"
-        style="@style/MenuButton"
-        android:text="@string/Dz1" />
+            android:id="@+id/button2"
+            style="@style/MenuButton"
+            android:text="@string/Dz1"/>
 
     <Button
-        android:id="@+id/button3"
-        style="@style/MenuButton"
-        android:text="@string/dz2classwork" />
+            android:id="@+id/button3"
+            style="@style/MenuButton"
+            android:text="@string/dz2classwork"/>
     <Button
-        style="@style/MenuButton"
-        android:id="@+id/button4"
-        android:text="@string/dz2"/>
+            style="@style/MenuButton"
+            android:id="@+id/button4"
+            android:text="@string/dz2"/>
+    <Button
+            style="@style/MenuButton"
+            android:id="@+id/button5"
+            android:text="@string/dz3"/>
 
 </LinearLayout>

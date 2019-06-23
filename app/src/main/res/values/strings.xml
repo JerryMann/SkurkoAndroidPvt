@@ -37,4 +37,7 @@
     <string name="country">COUNTRY</string>
     <string name="gender">GENDER</string>
     <string name="url_sample">https://upload.wikimedia.org/wikipedia/en/d/dc/MichaelScott.png</string>
+    <string name="dz3">DZ3</string>
+    <string name="_3">3</string>
+    <string name="_23">23</string>
 </resources>
