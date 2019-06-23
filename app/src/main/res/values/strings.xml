@@ -14,4 +14,7 @@
     <string name="create_account">CREATE ACCOUNT</string>
     <string name="Password">Password</string>
     <string name="Username">Username</string>
+    <string name="image">image</string>
+    <string name="url_input">url_input</string>
+    <string name="test_image">https://avatars.mds.yandex.net/get-pdb/467185/078a5008-00b6-4eed-a9ab-d36bae8ea903/s375</string>
 </resources>

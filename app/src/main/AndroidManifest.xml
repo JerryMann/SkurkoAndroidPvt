@@ -2,6 +2,8 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
           xmlns:tools="http://schemas.android.com/tools" package="by.itacademy.pvt.skurkoandroidpvt">
 
+    <uses-permission android:name="android.permission.INTERNET" />
+
     <application
             android:allowBackup="true"
             android:icon="@mipmap/ic_launcher"
@@ -13,6 +15,7 @@
         <activity android:name=".Dz0Activity"/>
         <activity android:name=".dz1.Dz1Activity"/>
         <activity android:name=".dz2.Dz2ClassworkActivity"/>
+        <activity android:name=".dz2.Dz2Activity"/>
         <activity android:name=".dzMenu.DzMenu">
           <intent-filter>
                 <action android:name="android.intent.action.MAIN"/>

@@ -19,10 +19,9 @@
         android:id="@+id/button3"
         style="@style/MenuButton"
         android:text="@string/dz2classwork" />
-
     <Button
-        android:id="@+id/button4"
         style="@style/MenuButton"
-        android:text="@string/dz2" />
+        android:id="@+id/button4"
+        android:text="@string/dz2"/>
 
 </LinearLayout>
