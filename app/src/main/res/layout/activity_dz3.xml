@@ -22,18 +22,16 @@
                     android:layout_height="wrap_content"
                     android:layout_marginTop="40dp"
                     android:layout_marginStart="15dp"
-                    android:src="@drawable/ic_notifications_white_24dp" />
+                    android:src="@drawable/ic_notifications_white_24dp"/>
 
             <LinearLayout
                     android:orientation="horizontal"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content">
-
                 <ImageView
                         android:id="@+id/avatar"
                         android:layout_width="150dp"
-                        android:layout_height="150dp" />
-
+                        android:layout_height="150dp"/>
                 <TextView
                         android:id="@+id/avatar_name"
                         android:layout_width="match_parent"
@@ -42,7 +40,7 @@
                         android:textColor="@color/white"
                         android:padding="20dp"
                         android:textSize="30sp"
-                        android:gravity="center_vertical" />
+                        android:gravity="center_vertical"/>
             </LinearLayout>
 
             <LinearLayout
@@ -50,72 +48,54 @@
                     android:layout_width="match_parent"
                     android:layout_weight="1"
                     android:layout_height="wrap_content">
-
                 <TextView
+                        style="@style/TrophiesAndFollowers"
                         android:id="@+id/trophies"
                         android:layout_width="0dp"
                         android:layout_weight="1"
                         android:layout_height="wrap_content"
-                        android:gravity="center"
-                        android:text="@string/trophies"
-                        android:textSize="15sp"
-                        android:textColor="@color/profile_grey" />
-
+                        android:text="@string/trophies"/>
                 <TextView
+                        style="@style/TrophiesAndFollowers"
                         android:id="@+id/following"
                         android:layout_width="0dp"
                         android:layout_weight="1"
                         android:layout_height="wrap_content"
-                        android:gravity="center"
-                        android:text="@string/following"
-                        android:textSize="15sp"
-                        android:textColor="@color/profile_grey" />
-
+                        android:text="@string/following"/>
                 <TextView
+                        style="@style/TrophiesAndFollowers"
                         android:id="@+id/followers"
                         android:layout_width="0dp"
                         android:layout_weight="1"
                         android:layout_height="wrap_content"
-                        android:gravity="center"
-                        android:text="@string/followers"
-                        android:textSize="15sp"
-                        android:textColor="@color/profile_grey" />
+                        android:text="@string/followers"/>
             </LinearLayout>
 
             <LinearLayout
                     android:orientation="horizontal"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content">
-
                 <TextView
+                        style="@style/ProfileNumbers"
                         android:id="@+id/trophies_number"
                         android:layout_width="0dp"
                         android:layout_weight="1"
                         android:layout_height="wrap_content"
-                        android:gravity="center"
-                        android:text="@string/_50"
-                        android:textSize="25sp"
-                        android:textColor="@color/profile_orange" />
-
+                        android:text="@string/_50"/>
                 <TextView
+                        style="@style/ProfileNumbers"
                         android:id="@+id/following_number"
                         android:layout_width="0dp"
                         android:layout_weight="1"
                         android:layout_height="wrap_content"
-                        android:gravity="center"
-                        android:text="@string/_50"
-                        android:textSize="25sp"
-                        android:textColor="@color/profile_orange" />
-
+                        android:text="@string/_50"/>
                 <TextView
+                        style="@style/ProfileNumbers"
                         android:id="@+id/followers_number"
                         android:layout_width="0dp"
                         android:layout_weight="1"
                         android:layout_height="wrap_content"
-                        android:gravity="center"
-                        android:text="@string/_50"
-                        android:textSize="25sp"
-                        android:textColor="@color/profile_orange" />
+                        android:text="@string/_50"/>
             </LinearLayout>
 
             <LinearLayout
@@ -125,7 +105,7 @@
                     android:orientation="horizontal"
                     android:layout_width="match_parent"
                     android:layout_height="1dp"
-                    android:background="@color/profile_grey" />
+                    android:background="@color/profile_grey"/>
         </LinearLayout>
 
         <LinearLayout
@@ -133,70 +113,39 @@
                 android:layout_height="match_parent"
                 android:orientation="horizontal"
                 android:layout_weight="1">
-
             <LinearLayout
                     android:layout_width="0dp"
                     android:layout_height="match_parent"
                     android:orientation="vertical"
                     android:layout_weight="1">
-
                 <TextView
+                        style="@style/ProfileKeys"
                         android:id="@+id/name"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:padding="20dp"
-                        android:text="@string/name"
-                        android:textColor="@color/profile_grey"
-                        android:textSize="15sp"/>
+                        android:text="@string/name"/>
                 <TextView
-                        android:id="@+id/name1"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:padding="20dp"
-                        android:text="@string/name"
-                        android:textColor="@color/profile_grey"
-                        android:textSize="15sp"/>
+                        style="@style/ProfileKeys"
+                        android:id="@+id/country"
+                        android:text="@string/country"/>
                 <TextView
-                        android:id="@+id/name2"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:padding="20dp"
-                        android:text="@string/name"
-                        android:textColor="@color/profile_grey"
-                        android:textSize="15sp"/>
+                        style="@style/ProfileKeys"
+                        android:id="@+id/postal"
+                        android:text="@string/postal_code"/>
                 <TextView
-                        android:id="@+id/name3"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:padding="20dp"
-                        android:text="@string/name"
-                        android:textColor="@color/profile_grey"
-                        android:textSize="15sp"/>
+                        style="@style/ProfileKeys"
+                        android:id="@+id/birthday"
+                        android:text="@string/date_of_birth"/>
                 <TextView
-                        android:id="@+id/name4"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:padding="20dp"
-                        android:text="@string/name"
-                        android:textColor="@color/profile_grey"
-                        android:textSize="15sp"/>
+                        style="@style/ProfileKeys"
+                        android:id="@+id/gender"
+                        android:text="@string/gender"/>
                 <TextView
-                        android:id="@+id/name5"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:padding="20dp"
-                        android:text="@string/name"
-                        android:textColor="@color/profile_grey"
-                        android:textSize="15sp"/>
+                        style="@style/ProfileKeys"
+                        android:id="@+id/height"
+                        android:text="@string/height"/>
                 <TextView
-                        android:id="@+id/name6"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:padding="20dp"
-                        android:text="@string/name"
-                        android:textColor="@color/profile_grey"
-                        android:textSize="15sp"/>
-
+                        style="@style/ProfileKeys"
+                        android:id="@+id/phone"
+                        android:text="@string/phone"/>
             </LinearLayout>
 
             <LinearLayout
@@ -204,65 +153,36 @@
                     android:layout_height="match_parent"
                     android:orientation="vertical"
                     android:layout_weight="1">
-
                 <TextView
+                        style="@style/ProfileValues"
                         android:id="@+id/value"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:padding="20dp"
-                        android:text="@string/name"
-                        android:textColor="@color/white"
-                        android:textSize="15sp"/>
+                        android:text="@string/name_value"/>
                 <TextView
-                        android:id="@+id/value1"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:padding="20dp"
-                        android:text="@string/name"
-                        android:textColor="@color/white"
-                        android:textSize="15sp"/>
+                        style="@style/ProfileValues"
+                        android:id="@+id/country_value"
+                        android:text="@string/country_value"/>
                 <TextView
-                        android:id="@+id/value2"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:padding="20dp"
-                        android:text="@string/name"
-                        android:textColor="@color/white"
-                        android:textSize="15sp"/>
+                        style="@style/ProfileValues"
+                        android:id="@+id/postal_value"
+                        android:text="@string/postal_value"/>
                 <TextView
-                        android:id="@+id/value3"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:padding="20dp"
-                        android:text="@string/name"
-                        android:textColor="@color/white"
-                        android:textSize="15sp"/>
+                        style="@style/ProfileValues"
+                        android:id="@+id/birth_value"
+                        android:text="@string/birth_value"/>
                 <TextView
-                        android:id="@+id/value4"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:padding="20dp"
-                        android:text="@string/name"
-                        android:textColor="@color/white"
-                        android:textSize="15sp"/>
+                        style="@style/ProfileValues"
+                        android:id="@+id/gender_value"
+                        android:text="@string/gender_value"/>
                 <TextView
-                        android:id="@+id/value5"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:padding="20dp"
-                        android:text="@string/name"
-                        android:textColor="@color/white"
-                        android:textSize="15sp"/>
+                        style="@style/ProfileValues"
+                        android:id="@+id/height_value"
+                        android:text="@string/height_value"/>
                 <TextView
-                        android:id="@+id/value6"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:padding="20dp"
-                        android:text="@string/name"
-                        android:textColor="@color/white"
-                        android:textSize="15sp"/>
-
+                        style="@style/ProfileValues"
+                        android:id="@+id/phone_value"
+                        android:text="@string/phone_value"/>
             </LinearLayout>
+
         </LinearLayout>
 
     </LinearLayout>

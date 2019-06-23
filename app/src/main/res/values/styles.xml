@@ -27,4 +27,32 @@
         <item name="android:maxLines">1</item>
     </style>
 
+    <style name="ProfileValues">
+        <item name="android:textColor">@color/white</item>
+        <item name="android:textSize">15sp</item>
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:padding">@dimen/ProfileValuesDimen</item>
+    </style>
+
+    <style name="ProfileKeys">
+        <item name="android:textColor">@color/profile_grey</item>
+        <item name="android:textSize">15sp</item>
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:padding">@dimen/ProfileValuesDimen</item>
+    </style>
+
+    <style name="ProfileNumbers">
+        <item name="android:gravity">center</item>
+        <item name="android:textSize">25sp</item>
+        <item name="android:textColor">@color/profile_orange</item>
+    </style>
+
+    <style name="TrophiesAndFollowers">
+        <item name="android:gravity">center</item>
+        <item name="android:textSize">15sp</item>
+        <item name="android:textColor">@color/profile_grey</item>
+    </style>
+
 </resources>

@@ -23,4 +23,18 @@
     <string name="followers">FOLLOWERS</string>
     <string name="_50">50</string>
     <string name="name">NAME</string>
+    <string name="phone_value">(781)202-0327</string>
+    <string name="height_value">5\'9\"</string>
+    <string name="gender_value">Male</string>
+    <string name="birth_value">Mar. 15, 1965</string>
+    <string name="postal_value">18512</string>
+    <string name="country_value">USA</string>
+    <string name="name_value">Michael Scott</string>
+    <string name="phone">PHONE</string>
+    <string name="height">HEIGHT</string>
+    <string name="date_of_birth">DATE OF BIRTH</string>
+    <string name="postal_code">POSTAL CODE</string>
+    <string name="country">COUNTRY</string>
+    <string name="gender">GENDER</string>
+    <string name="url_sample">https://upload.wikimedia.org/wikipedia/en/d/dc/MichaelScott.png</string>
 </resources>
