@@ -1,139 +1,151 @@
 <?xml version="1.0" encoding="utf-8"?>
 <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
-            android:orientation="vertical"
-            android:background="@color/colorMain"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent">
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorMain"
+    android:orientation="vertical">
 
     <LinearLayout
-            android:orientation="vertical"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content">
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
 
         <RelativeLayout
-                android:id="@+id/Austria"
-                android:layout_margin="10dp"
-                android:orientation="vertical"
-                android:background="@color/bloody"
-                android:layout_width="200dp"
-                android:layout_height="100dp">
+            android:id="@+id/Austria"
+            android:layout_width="200dp"
+            android:layout_height="100dp"
+            android:layout_margin="10dp"
+            android:background="@color/Austria_red"
+            android:orientation="vertical">
+
             <LinearLayout
-                    android:layout_marginTop="33dp"
-                    android:layout_marginBottom="33dp"
-                    android:background="@color/light"
-                    android:orientation="vertical"
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"/>
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="33dp"
+                android:layout_marginBottom="33dp"
+                android:background="@color/white"
+                android:orientation="vertical" />
         </RelativeLayout>
 
         <RelativeLayout
-                android:id="@+id/Poland"
-                android:background="@color/tomato"
-                android:layout_margin="10dp"
-                android:layout_width="200dp"
-                android:layout_height="100dp">
+            android:id="@+id/Poland"
+            android:layout_width="200dp"
+            android:layout_height="100dp"
+            android:layout_margin="10dp"
+            android:background="@color/Poland_red">
+
             <LinearLayout
-                    android:background="@color/light"
-                    android:orientation="vertical"
-                    android:layout_width="match_parent"
-                    android:layout_height="50dp"/>
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:background="@color/white"
+                android:orientation="vertical" />
         </RelativeLayout>
 
         <LinearLayout
-                android:id="@+id/Italy"
-                android:orientation="horizontal"
-                android:background="@color/tomato"
-                android:layout_margin="10dp"
-                android:layout_width="200dp"
-                android:layout_height="100dp">
+            android:id="@+id/Italy"
+            android:layout_width="200dp"
+            android:layout_height="100dp"
+            android:layout_margin="10dp"
+            android:background="@color/Italy_red"
+            android:orientation="horizontal">
+
             <LinearLayout
-                    android:orientation="horizontal"
-                    android:background="@color/grass"
-                    android:layout_width="66dp"
-                    android:layout_height="match_parent"/>
+                android:layout_width="66dp"
+                android:layout_height="match_parent"
+                android:background="@color/Italy_green"
+                android:orientation="horizontal" />
+
             <LinearLayout
-                    android:orientation="horizontal"
-                    android:background="@color/light"
-                    android:layout_width="65dp"
-                    android:layout_height="match_parent"/>
+                android:layout_width="65dp"
+                android:layout_height="match_parent"
+                android:background="@color/white"
+                android:orientation="horizontal" />
         </LinearLayout>
 
         <LinearLayout
-                android:id="@+id/Colombia"
-                android:layout_margin="10dp"
-                android:gravity="bottom"
-                android:background="@color/sunflower"
-                android:orientation="vertical"
-                android:layout_width="200dp"
-                android:layout_height="100dp">
+            android:id="@+id/Colombia"
+            android:layout_width="200dp"
+            android:layout_height="100dp"
+            android:layout_margin="10dp"
+            android:background="@color/Colombia_yellow"
+            android:gravity="bottom"
+            android:orientation="vertical">
+
             <LinearLayout
-                    android:orientation="horizontal"
-                    android:layout_width="match_parent"
-                    android:background="@color/sea"
-                    android:layout_height="25dp"/>
+                android:layout_width="match_parent"
+                android:layout_height="25dp"
+                android:background="@color/Colombia_blue"
+                android:orientation="horizontal" />
+
             <LinearLayout
-                    android:orientation="horizontal"
-                    android:background="@color/bloody"
-                    android:layout_width="match_parent"
-                    android:layout_height="25dp"/>
+                android:layout_width="match_parent"
+                android:layout_height="25dp"
+                android:background="@color/Colombia_red"
+                android:orientation="horizontal" />
         </LinearLayout>
 
         <LinearLayout
-                android:id="@+id/Madagascar"
-                android:layout_margin="10dp"
-                android:background="@color/light"
-                android:gravity="end"
-                android:layout_width="200dp"
-                android:layout_height="100dp">
+            android:id="@+id/Madagascar"
+            android:layout_width="200dp"
+            android:layout_height="100dp"
+            android:layout_margin="10dp"
+            android:background="@color/white"
+            android:gravity="end">
+
             <LinearLayout
-                    android:orientation="horizontal"
-                    android:layout_width="132dp"
-                    android:background="@color/carrot"
-                    android:layout_height="match_parent">
+                android:layout_width="132dp"
+                android:layout_height="match_parent"
+                android:background="@color/Madagascar_orange"
+                android:orientation="horizontal">
+
                 <LinearLayout
-                        android:orientation="horizontal"
-                        android:background="@color/grass"
-                        android:layout_width="132dp"
-                        android:layout_height="50dp"/>
+                    android:layout_width="132dp"
+                    android:layout_height="50dp"
+                    android:background="@color/Madagascar_green"
+                    android:orientation="horizontal" />
             </LinearLayout>
         </LinearLayout>
 
         <LinearLayout
-                android:id="@+id/Thailand"
-                android:layout_margin="10dp"
-                android:background="@color/bloody"
-                android:gravity="center"
-                android:layout_width="200dp"
-                android:layout_height="100dp">
+            android:id="@+id/Thailand"
+            android:layout_width="200dp"
+            android:layout_height="100dp"
+            android:layout_margin="10dp"
+            android:background="@color/Thailand_red"
+            android:gravity="center">
+
             <LinearLayout
-                    android:background="@color/light"
-                    android:gravity="center"
-                    android:layout_width="match_parent"
-                    android:layout_height="66dp">
+                android:layout_width="match_parent"
+                android:layout_height="66dp"
+                android:background="@color/white"
+                android:gravity="center">
+
                 <LinearLayout
-                        android:background="@color/sea"
-                        android:layout_width="match_parent"
-                        android:layout_height="33dp"/>
+                    android:layout_width="match_parent"
+                    android:layout_height="33dp"
+                    android:background="@color/Thailand_blue" />
             </LinearLayout>
         </LinearLayout>
 
         <FrameLayout
-                android:id="@+id/Denmark"
-                android:layout_margin="10dp"
-                android:background="@color/raspberries"
-                android:gravity="center"
-                android:layout_width="200dp"
-                android:layout_height="100dp">
+            android:id="@+id/Denmark"
+            android:layout_width="200dp"
+            android:layout_height="100dp"
+            android:layout_margin="10dp"
+            android:background="@color/Denmark_red"
+            android:gravity="center">
+
             <LinearLayout
-                    android:layout_marginStart="65dp"
-                    android:background="@color/light"
-                    android:layout_width="17dp"
-                    android:layout_height="match_parent"/>
+                android:layout_width="17dp"
+                android:layout_height="match_parent"
+                android:layout_marginStart="65dp"
+                android:background="@color/white" />
+
             <LinearLayout
-                    android:layout_marginTop="44dp"
-                    android:background="@color/light"
-                    android:layout_width="match_parent"
-                    android:layout_height="17dp"/>
+                android:layout_width="match_parent"
+                android:layout_height="17dp"
+                android:layout_marginTop="44dp"
+                android:background="@color/white" />
         </FrameLayout>
 
     </LinearLayout>

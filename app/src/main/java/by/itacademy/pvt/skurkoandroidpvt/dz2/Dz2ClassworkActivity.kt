@@ -1,13 +1,12 @@
-package by.itacademy.pvt.skurkoandroidpvt.dz1
+package by.itacademy.pvt.skurkoandroidpvt.dz2
 
 import android.app.Activity
 import android.os.Bundle
 import by.itacademy.pvt.skurkoandroidpvt.R
 
-class Dz1Activity : Activity() {
+class Dz2ClassworkActivity : Activity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_dz1)
+        setContentView(R.layout.activity_dz2classwork)
     }
-
 }

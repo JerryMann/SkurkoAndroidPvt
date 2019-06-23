@@ -4,7 +4,7 @@ import android.app.Activity
 import android.os.Bundle
 import kotlinx.android.synthetic.main.activity_dz0.*
 
-class Dz0activity : Activity() {
+class Dz0Activity : Activity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
