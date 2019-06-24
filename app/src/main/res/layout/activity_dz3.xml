@@ -36,6 +36,7 @@
                         android:id="@+id/avatar_name"
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
+                        android:fontFamily="@font/monda_bold"
                         android:text="@string/michael_scott"
                         android:textColor="@color/white"
                         android:padding="20dp"

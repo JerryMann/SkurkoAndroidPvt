@@ -1,4 +1,4 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <dimen name="ProfileValuesDimen">20dp</dimen>
+    <dimen name="profileValuesDimen">20dp</dimen>
 </resources>
