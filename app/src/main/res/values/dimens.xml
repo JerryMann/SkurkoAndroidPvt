@@ -1,4 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <dimen name="profileValuesDimen">20dp</dimen>
+
+    <dimen name="clockNumbers">50sp</dimen>
+    <dimen name="dz4ClockHandHourDim">10dp</dimen>
+    <dimen name="dz4ClockHandMinuteDim">5dp</dimen>
+    <dimen name="dz4ClockHandSecondDim">2dp</dimen>
+    <dimen name="dz4LinesDim">6dp</dimen>
 </resources>
