@@ -28,6 +28,15 @@ class Dz4MyClockView : View {
     private var handTruncation = 0f
     private var hourHandTruncation = 0f
     private val rect = Rect()
+    constructor(context: Context?) : super(context)
+    constructor(context: Context?, attrs: AttributeSet?) : super(context, attrs)
+    constructor(context: Context?, attrs: AttributeSet?, defStyleAttr: Int) : super(context, attrs, defStyleAttr)
+    constructor(context: Context?, attrs: AttributeSet?, defStyleAttr: Int, defStyleRes: Int) : super(
+        context,
+        attrs,
+        defStyleAttr,
+        defStyleRes
+    )
 
     override fun onSizeChanged(w: Int, h: Int, oldw: Int, oldh: Int) {
         super.onSizeChanged(w, h, oldw, oldh)
@@ -39,16 +48,6 @@ class Dz4MyClockView : View {
         handTruncation = Math.min(width, height) / 20f
         hourHandTruncation = Math.min(width, height) / 7f
     }
-
-    constructor(context: Context?) : super(context)
-    constructor(context: Context?, attrs: AttributeSet?) : super(context, attrs)
-    constructor(context: Context?, attrs: AttributeSet?, defStyleAttr: Int) : super(context, attrs, defStyleAttr)
-    constructor(context: Context?, attrs: AttributeSet?, defStyleAttr: Int, defStyleRes: Int) : super(
-        context,
-        attrs,
-        defStyleAttr,
-        defStyleRes
-    )
 
     init {
         borderPaint.color = ContextCompat.getColor(context, R.color.clock_border)
