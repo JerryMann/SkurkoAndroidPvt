@@ -27,5 +27,9 @@
             style="@style/MenuButton"
             android:id="@+id/button5"
             android:text="@string/dz3"/>
+    <Button
+            style="@style/MenuButton"
+            android:id="@+id/button6"
+            android:text="@string/dz4"/>
 
 </LinearLayout>
