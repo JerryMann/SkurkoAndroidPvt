@@ -4,10 +4,7 @@ import android.app.Activity
 import android.os.Bundle
 import android.widget.ImageView
 import by.itacademy.pvt.skurkoandroidpvt.R
-import by.itacademy.pvt.skurkoandroidpvt.transform.Circular
-import com.squareup.picasso.Callback
-import com.squareup.picasso.Picasso
-import java.lang.Exception
+import by.itacademy.pvt.skurkoandroidpvt.utils.loadCircularImage
 
 class Dz3Activity : Activity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -17,17 +14,6 @@ class Dz3Activity : Activity() {
         val imageView = findViewById<ImageView>(R.id.avatar)
         val url = getString(R.string.url_sample)
 
-        Picasso.get()
-            .load(url)
-            .transform(Circular())
-            .into(imageView, object : Callback {
-                override fun onSuccess() {
-                    return
-                }
-
-                override fun onError(e: Exception?) {
-                    imageView.background = getDrawable(R.drawable.error_image_icon_23)
-                }
-            })
+        loadCircularImage(url, imageView)
     }
 }
