@@ -36,4 +36,9 @@
             android:id="@+id/button7"
             android:text="@string/dz5_owl"/>
 
+    <Button
+            style="@style/MenuButton"
+            android:id="@+id/button8"
+            android:text="@string/dz5_diagram"/>
+
 </LinearLayout>
