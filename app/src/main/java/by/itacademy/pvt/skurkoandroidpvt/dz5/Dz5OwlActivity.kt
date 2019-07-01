@@ -7,22 +7,24 @@ import android.widget.ImageView
 import by.itacademy.pvt.skurkoandroidpvt.R
 
 class Dz5OwlActivity : Activity() {
+
+    private lateinit var owlAnimation: AnimationDrawable
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_dz5_owl)
+
+        owlAnimation = findViewById<ImageView>(R.id.dz5Owl)
+            .background as AnimationDrawable
     }
 
     override fun onResume() {
         super.onResume()
-
-        val owlAnimation = findViewById<ImageView>(R.id.dz5Owl)
-        (owlAnimation.background as AnimationDrawable).start()
+        owlAnimation.start()
     }
 
     override fun onPause() {
         super.onPause()
-
-        val owlAnimation = findViewById<ImageView>(R.id.dz5Owl)
-        (owlAnimation.background as AnimationDrawable).stop()
+        owlAnimation.stop()
     }
 }
