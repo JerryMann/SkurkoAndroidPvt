@@ -4,18 +4,14 @@ import android.app.Activity
 import android.content.Intent
 import android.os.Bundle
 import by.itacademy.pvt.skurkoandroidpvt.R
-import kotlinx.android.synthetic.main.activity_dz6_detail.*
+import kotlinx.android.synthetic.main.activity_dz6_edit.*
 
-class Dz6StudentDetailActivity : Activity() {
+class Dz6StudentEditActivity : Activity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_dz6_detail)
+        setContentView(R.layout.activity_dz6_edit)
 
-        dz6_detail_edit.setOnClickListener {
-            startActivity(Intent(this, Dz6StudentEditActivity::class.java))
-        }
-
-        dz6_detail_delete.setOnClickListener {
+        dz6_edit_save.setOnClickListener {
             startActivity(Intent(this, Dz6StudentListActivity::class.java))
         }
     }

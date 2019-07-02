@@ -43,4 +43,9 @@
     <string name="dz4">DZ4</string>
     <string name="student_s_avatar">Student\'s avatar</string>
     <string name="student_name">Student name</string>
+    <string name="edit">Edit</string>
+    <string name="delete">delete</string>
+    <string name="url">URL</string>
+    <string name="age">AGE</string>
+    <string name="save">SAVE</string>
 </resources>

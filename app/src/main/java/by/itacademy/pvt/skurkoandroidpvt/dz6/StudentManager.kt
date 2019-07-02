@@ -1,6 +1,6 @@
 package by.itacademy.pvt.skurkoandroidpvt.dz6
 
-object StudentListEditor {
+object StudentManager {
 
     private lateinit var studentList: MutableList<Student>
 

@@ -1,10 +1,12 @@
 package by.itacademy.pvt.skurkoandroidpvt.dz6
 
 import android.app.Activity
+import android.content.Intent
 import android.os.Bundle
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import by.itacademy.pvt.skurkoandroidpvt.R
+import kotlinx.android.synthetic.main.activity_student_list_dz6.*
 
 class Dz6StudentListActivity : Activity(), Dz6StudentListAdapter.ClickListener {
 
@@ -43,8 +45,13 @@ class Dz6StudentListActivity : Activity(), Dz6StudentListAdapter.ClickListener {
             )
         )
         recycleView.adapter = Dz6StudentListAdapter(items, this)
+
+        dz6_add_student.setOnClickListener {
+            startActivity(Intent(this, Dz6StudentEditActivity::class.java))
+        }
     }
 
     override fun onStudentClick(item: Student) {
+        startActivity(Intent(this, Dz6StudentDetailActivity::class.java))
     }
 }
