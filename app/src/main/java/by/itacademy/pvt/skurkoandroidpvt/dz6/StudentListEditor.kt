@@ -6,12 +6,12 @@ object StudentListEditor {
 
     fun getStudentList(): MutableList<Student> {
         if (studentList.isEmpty()) {
-            createStudentList()
+            // createStudentList()
         }
         return studentList
     }
 
-    private fun createStudentList(): MutableList<Student> {
+    /*private fun createStudentList(): MutableList<Student> {
         studentList = mutableListOf(
             Student(
                 "https://st.kp.yandex.net/images/actor_iphone/iphone360_61567.jpg",
@@ -39,5 +39,5 @@ object StudentListEditor {
             )
         )
         return studentList
-    }
+    } */
 }
