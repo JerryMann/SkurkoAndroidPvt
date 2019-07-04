@@ -1,43 +1,76 @@
 package by.itacademy.pvt.skurkoandroidpvt.dz6
 
+import kotlin.random.Random
+
 object StudentManager {
 
-    private lateinit var studentList: MutableList<Student>
+    private var studentList: MutableList<Student> = mutableListOf()
 
     fun getStudentList(): MutableList<Student> {
         if (studentList.isEmpty()) {
-            // createStudentList()
+            createStudentList()
         }
         return studentList
     }
 
-    /*private fun createStudentList(): MutableList<Student> {
+    private fun createStudentList(): MutableList<Student> {
         studentList = mutableListOf(
             Student(
+                Random(System.currentTimeMillis()).toString(),
                 "https://st.kp.yandex.net/images/actor_iphone/iphone360_61567.jpg",
-                "Kaley Cuoco", 23
+                "Kaley Cuoco",
+                23
             ),
             Student(
-                "http://www.tele.ru/wp-content/uploads/2018/11/74d88c1dfd19ac27503c333ea8862ba3.jpg",
-                "Johnny Galecki", 25
+                Random(System.currentTimeMillis()).toString(),
+                "https://st.kp.yandex.net/images/actor_iphone/iphone360_13258.jpg",
+                "Johnny Galecki",
+                25
             ),
             Student(
+                Random(System.currentTimeMillis()).toString(),
                 "https://st.kp.yandex.net/images/actor_iphone/iphone360_223588.jpg",
-                "James Parsons", 27
+                "James Parsons",
+                27
             ),
             Student(
+                Random(System.currentTimeMillis()).toString(),
                 "https://st.kp.yandex.net/images/actor_iphone/iphone360_1085069.jpg",
-                "Melissa Rauch", 22
+                "Melissa Rauch",
+                22
             ),
             Student(
+                Random(System.currentTimeMillis()).toString(),
                 "https://st.kp.yandex.net/images/actor_iphone/iphone360_1231378.jpg",
-                "Kunal Nayyar", 24
+                "Kunal Nayyar",
+                24
             ),
             Student(
+                Random(System.currentTimeMillis()).toString(),
                 "https://st.kp.yandex.net/images/actor_iphone/iphone360_26550.jpg",
-                "Simon Helberg", 26
+                "Simon Helberg",
+                26
             )
         )
         return studentList
-    } */
+    }
+
+    fun getStudent(id: String): Student? {
+        return studentList.find { it.id == id }
+    }
+
+    fun deleteStudent(id: String) {
+        studentList.find { it.id == id }?.apply { studentList.remove(this) }
+    }
+
+    fun updateStudent(student: Student) {
+        val index = studentList.indexOfFirst { it.id == student.id }
+        if (index != -1) {
+            studentList[index] = student
+        }
+    }
+
+    fun createStudent(student: Student) {
+        studentList.add(student)
+    }
 }

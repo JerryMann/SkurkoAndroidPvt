@@ -17,6 +17,7 @@
     <string name="image">image</string>
     <string name="url_input">url_input</string>
     <string name="test_image">https://avatars.mds.yandex.net/get-pdb/467185/078a5008-00b6-4eed-a9ab-d36bae8ea903/s375</string>
+
     <string name="michael_scott">Michael Scott</string>
     <string name="trophies">TROPHIES</string>
     <string name="following">FOLLOWING</string>
@@ -41,6 +42,7 @@
     <string name="_3">3</string>
     <string name="_23">23</string>
     <string name="dz4">DZ4</string>
+
     <string name="student_s_avatar">Student\'s avatar</string>
     <string name="student_name">Student name</string>
     <string name="edit">Edit</string>
