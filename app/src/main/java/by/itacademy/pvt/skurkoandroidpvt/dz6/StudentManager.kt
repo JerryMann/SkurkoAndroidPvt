@@ -73,4 +73,8 @@ object StudentManager {
     fun createStudent(student: Student) {
         studentList.add(student)
     }
+
+    fun findStudents(query: String): List<Student> {
+        return studentList.filter { it.name.contains(query, true) }
+    }
 }

@@ -4,6 +4,7 @@ import android.app.Activity
 import android.content.Context
 import android.content.Intent
 import android.os.Bundle
+import android.webkit.URLUtil
 import android.widget.Toast
 import kotlinx.android.synthetic.main.activity_dz6_edit.*
 import kotlin.random.Random
@@ -44,6 +45,8 @@ class Dz6StudentEditActivity : Activity() {
                 newAge == null
             ) {
                 Toast.makeText(this, "Fields should'nt be empty", Toast.LENGTH_SHORT).show()
+            } else if (!URLUtil.isValidUrl(newUrl)) {
+                Toast.makeText(this, "Input valid url", Toast.LENGTH_SHORT).show()
             } else {
 
                 if (item == null) {

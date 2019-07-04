@@ -6,7 +6,7 @@ import androidx.recyclerview.widget.RecyclerView
 import by.itacademy.pvt.skurkoandroidpvt.R
 
 class Dz6StudentListAdapter(
-    private val items: List<Student>,
+    private var items: List<Student>,
     private val listener: ClickListener
 ) : RecyclerView.Adapter<Dz6StudentListViewHolder>() {
 
@@ -27,6 +27,11 @@ class Dz6StudentListAdapter(
 
     override fun getItemCount(): Int {
         return items.size
+    }
+
+    fun updateList(items: List<Student>) {
+        this.items = items
+        notifyDataSetChanged()
     }
 
     interface ClickListener {
