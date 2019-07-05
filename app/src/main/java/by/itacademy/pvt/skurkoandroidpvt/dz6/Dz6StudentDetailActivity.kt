@@ -38,7 +38,7 @@ class Dz6StudentDetailActivity : Activity() {
 
         dz6_detail_edit.setOnClickListener {
             if (item == null) {
-                Toast.makeText(this@Dz6StudentDetailActivity, "No item to edit", Toast.LENGTH_SHORT).show()
+                Toast.makeText(this@Dz6StudentDetailActivity, R.string.dz6_wrong_id, Toast.LENGTH_SHORT).show()
             } else {
                 startActivity(Dz6StudentEditActivity.getIntent(this@Dz6StudentDetailActivity, itemId))
             }
@@ -47,7 +47,7 @@ class Dz6StudentDetailActivity : Activity() {
 
         dz6_detail_delete.setOnClickListener {
             if (item == null) {
-                Toast.makeText(this@Dz6StudentDetailActivity, "No item to delete", Toast.LENGTH_SHORT).show()
+                Toast.makeText(this@Dz6StudentDetailActivity, R.string.dz6_wrong_id, Toast.LENGTH_SHORT).show()
             } else {
                 StudentManager.deleteStudent(itemId)
             }

@@ -44,9 +44,9 @@ class Dz6StudentEditActivity : Activity() {
                 newName.isEmpty() ||
                 newAge == null
             ) {
-                Toast.makeText(this, "Fields should'nt be empty", Toast.LENGTH_SHORT).show()
+                Toast.makeText(this, R.string.dz6_error_empty, Toast.LENGTH_SHORT).show()
             } else if (!URLUtil.isValidUrl(newUrl)) {
-                Toast.makeText(this, "Input valid url", Toast.LENGTH_SHORT).show()
+                Toast.makeText(this, R.string.dz6_error_url, Toast.LENGTH_SHORT).show()
             } else {
 
                 if (item == null) {

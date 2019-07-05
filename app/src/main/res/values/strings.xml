@@ -50,4 +50,7 @@
     <string name="url">URL</string>
     <string name="age">AGE</string>
     <string name="save">SAVE</string>
+    <string name="dz6_error_empty">Fields should\'nt be empty</string>
+    <string name="dz6_error_url">Input valid url</string>
+    <string name="dz6_wrong_id">"No item to edit"</string>
 </resources>
