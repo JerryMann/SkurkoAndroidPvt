@@ -34,6 +34,9 @@ class Dz6StudentDetailActivity : Activity() {
             loadCircularImage(item.imageUrl, avatarImageView)
             dz6_detail_name.text = item.name
             dz6_detail_age.text = item.age.toString()
+        } else {
+            startActivity(Intent(this, Dz6StudentListActivity::class.java))
+            finish()
         }
 
         dz6_detail_edit.setOnClickListener {
