@@ -32,4 +32,10 @@
     <color name="profile_orange">#d45807</color>
     <color name="clock_border">#461E0B</color>
     <color name="clock_white">#E2E2E2</color>
+    <color name="dz5_diagram_color_1">#B9C755</color>
+    <color name="dz5_diagram_color_2">#C755AE</color>
+    <color name="dz5_diagram_color_3">#C7A155</color>
+    <color name="dz5_diagram_color_4">#55C757</color>
+    <color name="dz5_diagram_color_5">#C75555</color>
+    <color name="dz5_values_background">#00111111</color>
 </resources>
