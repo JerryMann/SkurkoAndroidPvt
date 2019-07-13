@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:orientation="vertical"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:background="@color/dz3_black">
+
+    <TextView
+            android:textColor="@color/white"
+            android:textSize="30sp"
+            android:text="@string/url"
+            android:layout_marginTop="30dp"
+            android:gravity="center"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+
+    <EditText
+            android:id="@+id/dz8_urlEditText"
+            style="@style/LoginEditName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:textColor="@color/white"
+            android:inputType="textUri"/>
+
+    <TextView
+            android:textColor="@color/white"
+            android:textSize="30sp"
+            android:text="@string/name"
+            android:layout_marginTop="30dp"
+            android:gravity="center"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+
+    <EditText
+            android:id="@+id/dz8_nameEditText"
+            style="@style/LoginEditName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:textColor="@color/white"
+            android:inputType="text"/>
+
+    <TextView
+            android:textColor="@color/white"
+            android:textSize="30sp"
+            android:text="@string/age"
+            android:layout_marginTop="30dp"
+            android:gravity="center"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+
+    <EditText
+            android:id="@+id/dz8_ageEditText"
+            style="@style/LoginEditName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:textColor="@color/white"
+            android:inputType="number"/>
+
+    <Button
+            android:layout_gravity="center"
+            android:id="@+id/dz8_edit_save"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@color/colorAccent"
+            android:textSize="40sp"
+            android:padding="20dp"
+            android:text="@string/save"
+            android:layout_margin="20dp"
+            android:textColor="@color/white"/>
+
+</LinearLayout>

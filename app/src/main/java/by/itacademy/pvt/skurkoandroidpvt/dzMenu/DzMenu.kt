@@ -13,6 +13,7 @@ import by.itacademy.pvt.skurkoandroidpvt.dz4.Dz4Activity
 import by.itacademy.pvt.skurkoandroidpvt.dz5.Dz5DiagramActivity
 import by.itacademy.pvt.skurkoandroidpvt.dz5.Dz5OwlActivity
 import by.itacademy.pvt.skurkoandroidpvt.dz6.Dz6StudentListActivity
+import by.itacademy.pvt.skurkoandroidpvt.dz8.Dz8Activity
 import kotlinx.android.synthetic.main.activity_menu.*
 
 class DzMenu : Activity() {
@@ -55,6 +56,10 @@ class DzMenu : Activity() {
 
         button9.setOnClickListener {
             startActivity(Intent(this, Dz6StudentListActivity::class.java))
+        }
+
+        button10.setOnClickListener {
+            startActivity(Intent(this, Dz8Activity::class.java))
         }
     }
 }
