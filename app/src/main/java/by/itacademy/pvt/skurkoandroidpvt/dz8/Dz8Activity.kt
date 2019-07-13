@@ -6,7 +6,7 @@ import androidx.fragment.app.Fragment
 import androidx.fragment.app.FragmentActivity
 import by.itacademy.pvt.skurkoandroidpvt.R
 
-class Dz8Activity : FragmentActivity(), Dz8ListFragment.Listener, Dz8DetailFragment.Listener {
+class Dz8Activity : FragmentActivity(), Dz8ListFragment.Listener, Dz8DetailFragment.Listener, Dz8EditFragment.Listener {
 
     private var isLandscape: Boolean = false
 
@@ -24,9 +24,7 @@ class Dz8Activity : FragmentActivity(), Dz8ListFragment.Listener, Dz8DetailFragm
         setContentView(R.layout.activity_dz8)
 
         if (savedInstanceState == null) {
-            val transaction = supportFragmentManager.beginTransaction()
-            transaction.replace(R.id.dz8ContainerOne, Dz8ListFragment(), Dz8ListFragment.TAG)
-            transaction.commit()
+            resetFragment()
         }
         isLandscape = resources.configuration.orientation == Configuration.ORIENTATION_LANDSCAPE
     }
@@ -38,11 +36,9 @@ class Dz8Activity : FragmentActivity(), Dz8ListFragment.Listener, Dz8DetailFragm
         transaction.commit()
     }
 
-    override fun onStudentDeleteClicked() {
+    override fun onDeleteClicked() {
         val transaction = supportFragmentManager.beginTransaction()
-
-        (supportFragmentManager.findFragmentByTag(Dz8ListFragment.TAG) as? Dz8ListFragment)?.startSearch()
-
+        (supportFragmentManager.findFragmentByTag(Dz8ListFragment.TAG) as? Dz8ListFragment)?.updateRecycle()
         if (isLandscape) {
             supportFragmentManager.findFragmentByTag(Dz8DetailFragment.TAG)?.apply { transaction.remove(this) }
             transaction.replace(R.id.dz8ContainerTwo, Fragment())
@@ -53,9 +49,35 @@ class Dz8Activity : FragmentActivity(), Dz8ListFragment.Listener, Dz8DetailFragm
         transaction.commit()
     }
 
-    override fun onStudentEditClicked(id: String) {
+    override fun onEditClicked(id: String) {
         val transaction = supportFragmentManager.beginTransaction()
         transaction.replace(extraContainerId, Dz8EditFragment.getInstance(id), Dz8EditFragment.TAG)
+        transaction.commit()
+    }
+
+    override fun onSaveClicked() {
+        val transaction = supportFragmentManager.beginTransaction()
+
+        (supportFragmentManager.findFragmentByTag(Dz8ListFragment.TAG) as? Dz8ListFragment)?.updateRecycle()
+
+        if (isLandscape) {
+            supportFragmentManager.findFragmentByTag(Dz8EditFragment.TAG)?.apply { transaction.remove(this) }
+        } else {
+            supportFragmentManager.popBackStack()
+        }
+        resetFragment()
+        transaction.commit()
+    }
+
+    override fun onPlusClicked() {
+        val transaction = supportFragmentManager.beginTransaction()
+        transaction.replace(extraContainerId, Dz8EditFragment.getInstance(), Dz8EditFragment.TAG)
+        transaction.commit()
+    }
+
+    private fun resetFragment() {
+        val transaction = supportFragmentManager.beginTransaction()
+        transaction.replace(R.id.dz8ContainerOne, Dz8ListFragment(), Dz8ListFragment.TAG)
         transaction.commit()
     }
 }

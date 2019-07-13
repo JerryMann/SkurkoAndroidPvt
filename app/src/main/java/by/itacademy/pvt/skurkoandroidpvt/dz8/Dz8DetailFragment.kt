@@ -54,14 +54,14 @@ class Dz8DetailFragment : Fragment() {
             } else {
                 StudentManager.deleteStudent(studentId)
             }
-            clickListener?.onStudentDeleteClicked()
+            clickListener?.onDeleteClicked()
         }
 
         dz8_detail_edit.setOnClickListener {
             if (student == null) {
                 Toast.makeText(context, R.string.dz6_wrong_id, Toast.LENGTH_SHORT).show()
             } else {
-                clickListener?.onStudentEditClicked(studentId)
+                clickListener?.onEditClicked(studentId)
             }
         }
     }
@@ -79,7 +79,7 @@ class Dz8DetailFragment : Fragment() {
     }
 
     interface Listener {
-        fun onStudentEditClicked(id: String)
-        fun onStudentDeleteClicked()
+        fun onEditClicked(id: String)
+        fun onDeleteClicked()
     }
 }

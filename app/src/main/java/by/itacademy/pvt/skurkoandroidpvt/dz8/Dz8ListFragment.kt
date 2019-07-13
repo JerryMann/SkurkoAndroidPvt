@@ -2,6 +2,8 @@ package by.itacademy.pvt.skurkoandroidpvt.dz8
 
 import android.content.Context
 import android.os.Bundle
+import android.text.Editable
+import android.text.TextWatcher
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -12,6 +14,9 @@ import by.itacademy.pvt.skurkoandroidpvt.R
 import by.itacademy.pvt.skurkoandroidpvt.dz6.Dz6StudentListAdapter
 import by.itacademy.pvt.skurkoandroidpvt.dz6.Student
 import by.itacademy.pvt.skurkoandroidpvt.dz6.StudentManager
+import kotlinx.android.synthetic.main.fragment_student_list_dz8.*
+import java.util.Timer
+import kotlin.concurrent.schedule
 
 class Dz8ListFragment : Fragment(), Dz6StudentListAdapter.ClickListener {
 
@@ -28,13 +33,17 @@ class Dz8ListFragment : Fragment(), Dz6StudentListAdapter.ClickListener {
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
-        val recycleView = view.findViewById<RecyclerView>(R.id.dz6_recycler)
+        val recycleView = view.findViewById<RecyclerView>(R.id.dz8_recycler)
         recycleView.setHasFixedSize(true)
         recycleView.layoutManager = LinearLayoutManager(context)
         dz6Adapter = Dz6StudentListAdapter(StudentManager.getStudentList(), this)
         recycleView.adapter = dz6Adapter
 
-        /*   searchStudent.addTextChangedListener(object : TextWatcher {
+        dz8_add_student.setOnClickListener {
+            clickListener?.onPlusClicked()
+        }
+
+        searchStudent.addTextChangedListener(object : TextWatcher {
 
             private var timer = Timer()
 
@@ -43,8 +52,8 @@ class Dz8ListFragment : Fragment(), Dz6StudentListAdapter.ClickListener {
                 timer = Timer()
                 timer.schedule(500) {
                     searchText = sequence.toString()
-                    runOnUiThread {
-                        startSearch()
+                    activity?.runOnUiThread {
+                        updateRecycle()
                     }
                 }
             }
@@ -54,7 +63,7 @@ class Dz8ListFragment : Fragment(), Dz6StudentListAdapter.ClickListener {
 
             override fun onTextChanged(p0: CharSequence?, p1: Int, p2: Int, p3: Int) {
             }
-        })  */
+        })
     }
 
     override fun onAttach(context: Context) {
@@ -73,12 +82,12 @@ class Dz8ListFragment : Fragment(), Dz6StudentListAdapter.ClickListener {
         clickListener?.onStudentClicked(item.id)
     }
 
-    fun startSearch() {
+    fun updateRecycle() {
         dz6Adapter.updateList(StudentManager.findStudents(searchText))
     }
 
     interface Listener {
         fun onStudentClicked(id: String)
-        // fun onFabClicked()
+        fun onPlusClicked()
     }
 }
