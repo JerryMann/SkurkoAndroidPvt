@@ -20,8 +20,9 @@ import kotlin.concurrent.schedule
 
 class Dz8ListFragment : Fragment(), Dz6StudentListAdapter.ClickListener {
 
+    private lateinit var prefManager: Dz8PrefManager
     private lateinit var dz6Adapter: Dz6StudentListAdapter
-    private lateinit var searchText: String
+    private var searchText: String = ""
     private var clickListener: Listener? = null
 
     companion object {
@@ -64,6 +65,26 @@ class Dz8ListFragment : Fragment(), Dz6StudentListAdapter.ClickListener {
             override fun onTextChanged(p0: CharSequence?, p1: Int, p2: Int, p3: Int) {
             }
         })
+    }
+
+    override fun onActivityCreated(savedInstanceState: Bundle?) {
+        super.onActivityCreated(savedInstanceState)
+        prefManager = Dz8PrefManager(requireContext())
+    }
+
+    override fun onPause() {
+        super.onPause()
+        prefManager.saveUserText(searchText)
+    }
+
+    override fun onResume() {
+        super.onResume()
+        val savedText = prefManager.getUserText()
+        if (savedText != searchText) {
+            searchText = savedText
+            searchStudent.setText(savedText)
+            updateRecycle()
+        }
     }
 
     override fun onAttach(context: Context) {
