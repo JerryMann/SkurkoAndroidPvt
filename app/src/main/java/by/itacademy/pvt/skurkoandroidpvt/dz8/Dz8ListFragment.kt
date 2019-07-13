@@ -1,5 +1,6 @@
 package by.itacademy.pvt.skurkoandroidpvt.dz8
 
+import android.content.Context
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
@@ -16,6 +17,7 @@ class Dz8ListFragment : Fragment(), Dz6StudentListAdapter.ClickListener {
 
     private lateinit var dz6Adapter: Dz6StudentListAdapter
     private lateinit var searchText: String
+    private var clickListener: Listener? = null
 
     companion object {
         val TAG = Dz8ListFragment::class.java.canonicalName!!
@@ -55,6 +57,28 @@ class Dz8ListFragment : Fragment(), Dz6StudentListAdapter.ClickListener {
         })  */
     }
 
+    override fun onAttach(context: Context) {
+        super.onAttach(context)
+        if (context is Listener) {
+            clickListener = context
+        }
+    }
+
+    override fun onDetach() {
+        super.onDetach()
+        clickListener = null
+    }
+
     override fun onStudentClick(item: Student) {
+        clickListener?.onStudentClicked(item.id)
+    }
+
+    fun startSearch() {
+        dz6Adapter.updateList(StudentManager.findStudents(searchText))
+    }
+
+    interface Listener {
+        fun onStudentClicked(id: String)
+        // fun onFabClicked()
     }
 }
