@@ -10,13 +10,16 @@
     <string name="dz2classwork">DZ2ClassWork</string>
     <string name="dz2">DZ2</string>
     <string name="log_in">LOG IN</string>
-    <string name="forgot_your_username_password"><u>Forgot your username/password?</u></string>
+    <string name="forgot_your_username_password">
+        <u>Forgot your username/password?</u>
+    </string>
     <string name="create_account">CREATE ACCOUNT</string>
     <string name="Password">Password</string>
     <string name="Username">Username</string>
     <string name="image">image</string>
     <string name="url_input">url_input</string>
-    <string name="test_image">https://avatars.mds.yandex.net/get-pdb/467185/078a5008-00b6-4eed-a9ab-d36bae8ea903/s375</string>
+    <string name="test_image">https://avatars.mds.yandex.net/get-pdb/467185/078a5008-00b6-4eed-a9ab-d36bae8ea903/s375
+    </string>
 
     <string name="michael_scott">Michael Scott</string>
     <string name="trophies">TROPHIES</string>
@@ -60,6 +63,7 @@
     <string name="dz6">DZ6</string>
     <string name="dz8">DZ8</string>
 
-    <string name="gmap_key">AIzaSyBG8Fio7IhVy2iS7A_X1vN6OvaehXUwOfY</string>
+    <string name="dz9">DZ9</string>
+    <string name="title_activity_maps">Map</string>
 
 </resources>
