@@ -24,6 +24,7 @@
         <activity android:name=".dz8.Dz8Activity"/>
         <activity android:name=".dz5.Dz5OwlActivity"/>
         <activity android:name=".dz5.Dz5DiagramActivity"/>
+        <activity android:name=".dz9.Dz9Activity"/>
         <activity android:name=".dzMenu.DzMenu">
           <intent-filter>
                 <action android:name="android.intent.action.MAIN"/>
@@ -31,6 +32,11 @@
                 <category android:name="android.intent.category.LAUNCHER"/>
             </intent-filter>
         </activity>
+
+        <meta-data
+                android:name="com.google.android.geo.API_KEY"
+                android:value="@string/gmap_key"/>
+
     </application>
 
 </manifest>
