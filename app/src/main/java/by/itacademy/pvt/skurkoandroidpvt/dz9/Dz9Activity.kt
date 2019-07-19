@@ -21,7 +21,7 @@ import com.google.android.gms.maps.model.LatLngBounds
 import com.google.android.gms.maps.model.MarkerOptions
 import com.google.android.material.bottomsheet.BottomSheetBehavior
 
-class Dz9Activity : FragmentActivity(), OnMapReadyCallback {
+class Dz9Activity : FragmentActivity(), OnMapReadyCallback, Dz9Fragment.Listener {
 
     private lateinit var googleMap: GoogleMap
     private var isMapReady = false
@@ -93,5 +93,17 @@ class Dz9Activity : FragmentActivity(), OnMapReadyCallback {
         if (carList.isNotEmpty()) {
             setCarsOnMap()
         }
+    }
+
+    override fun onCarClick(id: String) {
+        val carClicked = carList.find { it.id == id }
+        carClicked?.let { zoomOnCar(it) }
+        bottomSheetBehavior.state = BottomSheetBehavior.STATE_COLLAPSED
+    }
+
+    private fun zoomOnCar(it: Poi) {
+        val coordinate = LatLng(it.coordinate!!.latitude, it.coordinate.longitude)
+        val zoom = 20f
+        googleMap.animateCamera(CameraUpdateFactory.newLatLngZoom(coordinate, zoom))
     }
 }

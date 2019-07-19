@@ -16,7 +16,7 @@ import by.itacademy.pvt.skurkoandroidpvt.dz9.entity.Poi
 
 class Dz9Fragment : Fragment(), Dz9Adapter.ClickListener {
 
-    private var clickListener: Dz9Adapter.ClickListener? = null
+    private var clickListener: Listener? = null
     private val carRepository: CarRepository = provideCarRepository()
 
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? {
@@ -46,7 +46,7 @@ class Dz9Fragment : Fragment(), Dz9Adapter.ClickListener {
 
     override fun onAttach(context: Context) {
         super.onAttach(context)
-        if (context is Dz9Adapter.ClickListener) {
+        if (context is Listener) {
             clickListener = context
         }
     }
@@ -57,6 +57,10 @@ class Dz9Fragment : Fragment(), Dz9Adapter.ClickListener {
     }
 
     override fun onCarClicked(item: Poi) {
-        TODO("not implemented") // To change body of created functions use File | Settings | File Templates.
+        clickListener?.onCarClick(item.id)
+    }
+
+    interface Listener {
+        fun onCarClick(id: String)
     }
 }

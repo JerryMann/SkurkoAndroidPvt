@@ -73,7 +73,7 @@
     <style name="Dz9_list_title">
         <item name="android:background">@color/colorMain</item>
         <item name="android:gravity">center</item>
-        <item name="android:textSize">40sp</item>
+        <item name="android:textSize">25sp</item>
         <item name="android:fontFamily">@font/monda_bold</item>
     </style>
 
