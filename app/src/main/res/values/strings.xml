@@ -65,5 +65,7 @@
 
     <string name="dz9">DZ9</string>
     <string name="title_activity_maps">Map</string>
+    <string name="dz9_map_error">Failed to load cars</string>
+    <string name="car_list">Car List</string>
 
 </resources>
