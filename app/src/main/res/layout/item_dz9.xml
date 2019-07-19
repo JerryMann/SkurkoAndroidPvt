@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:tools="http://schemas.android.com/tools"
+              android:orientation="vertical"
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              android:layout_margin="10dp"
+              android:background="@color/clock_white">
+
+    <TextView android:id="@+id/fleet_type_id"
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              style="@style/Dz9_fleet_type"
+              tools:text="Fleet Type"/>
+
+    <TextView android:id="@+id/longitude_id"
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              style="@style/Dz9_parameters"
+              tools:text="longitude"/>
+
+    <TextView android:id="@+id/latitude_id"
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              style="@style/Dz9_parameters"
+              tools:text="latitude"/>
+
+</LinearLayout>
