@@ -7,6 +7,7 @@ import by.itacademy.pvt.skurkoandroidpvt.Dz0Activity
 import by.itacademy.pvt.skurkoandroidpvt.R
 import by.itacademy.pvt.skurkoandroidpvt.dz1.Dz1Activity
 import by.itacademy.pvt.skurkoandroidpvt.dz11.dzMVP.Dz11StudentListActivity
+import by.itacademy.pvt.skurkoandroidpvt.dz11.dzMVVM.Dz11Activity
 import by.itacademy.pvt.skurkoandroidpvt.dz2.Dz2Activity
 import by.itacademy.pvt.skurkoandroidpvt.dz2.Dz2ClassworkActivity
 import by.itacademy.pvt.skurkoandroidpvt.dz3.Dz3Activity
@@ -70,6 +71,10 @@ class DzMenu : Activity() {
 
         button12.setOnClickListener {
             startActivity(Intent(this, Dz11StudentListActivity::class.java))
+        }
+
+        button13.setOnClickListener {
+            startActivity(Intent(this, Dz11Activity::class.java))
         }
     }
 }

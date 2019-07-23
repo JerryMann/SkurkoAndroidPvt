@@ -35,6 +35,7 @@
         <activity android:name=".dz5.Dz5DiagramActivity"/>
         <activity android:name=".dz9.Dz9Activity"/>
         <activity android:name=".dz11.dzMVP.Dz11StudentListActivity"/>
+        <activity android:name=".dz11.dzMVVM.Dz11Activity"/>
         <activity android:name=".dzMenu.DzMenu">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN"/>
