@@ -17,7 +17,7 @@ class Dz11DetailPresenter {
 
     fun loadStudent(id: String) {
         val student: Student? = StudentManager.getStudent(id)
-        view?.getDetails(student)
+        view?.showStudent(student)
     }
 
     fun deleteStudent(id: String) {

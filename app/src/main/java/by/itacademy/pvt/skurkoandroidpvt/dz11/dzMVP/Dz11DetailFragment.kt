@@ -59,7 +59,7 @@ class Dz11DetailFragment : Fragment(), Dz11DetailView {
         }
     }
 
-    override fun getDetails(student: Student?) {
+    override fun showStudent(student: Student?) {
         if (student != null) {
             context?.let { loadCircularImage(student.imageUrl, dz8_detail_image) }
             dz8_detail_name.text = student.name

@@ -5,8 +5,6 @@ import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.webkit.URLUtil
-import android.widget.Toast
 import androidx.fragment.app.Fragment
 import by.itacademy.pvt.skurkoandroidpvt.R
 import by.itacademy.pvt.skurkoandroidpvt.dz6.Student
@@ -42,30 +40,17 @@ class Dz11EditFragment : Fragment(), Dz11EditView {
 
         presenter = Dz11EditPresenter()
         presenter.setView(this)
+        presenter.setContext(view.context)
 
         if (studentId != null)
             presenter.loadStudent(studentId)
 
         dz8_edit_save.setOnClickListener {
-            val newUrl = dz8_urlEditText.text.toString().trim()
-            val newName = dz8_nameEditText.text.toString().trim()
-            val newAge = dz8_ageEditText.text.toString().toIntOrNull()
+            val newUrl = dz8_urlEditText
+            val newName = dz8_nameEditText
+            val newAge = dz8_ageEditText
 
-            if (newUrl.isEmpty() ||
-                newName.isEmpty() ||
-                newAge == null
-            ) {
-                Toast.makeText(context, R.string.dz6_error_empty, Toast.LENGTH_SHORT).show()
-            } else if (!URLUtil.isValidUrl(newUrl)) {
-                Toast.makeText(context, R.string.dz6_error_url, Toast.LENGTH_SHORT).show()
-            } else {
-
-                if (studentId == null) {
-                    presenter.createStudent(newUrl, newName, newAge)
-                } else {
-                    presenter.updateStudent(studentId, newUrl, newName, newAge)
-                }
-            }
+            presenter.saveStudent(studentId, newUrl, newName, newAge)
             clickListener?.onSaveClicked()
         }
     }
@@ -75,7 +60,7 @@ class Dz11EditFragment : Fragment(), Dz11EditView {
         presenter.onViewDestroyed()
     }
 
-    override fun getDetails(student: Student?) {
+    override fun showStudent(student: Student?) {
         if (student != null) {
             dz8_urlEditText.setText(student.imageUrl)
             dz8_nameEditText.setText(student.name)
