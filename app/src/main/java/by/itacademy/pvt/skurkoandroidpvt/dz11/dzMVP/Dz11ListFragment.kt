@@ -13,14 +13,12 @@ import androidx.recyclerview.widget.RecyclerView
 import by.itacademy.pvt.skurkoandroidpvt.R
 import by.itacademy.pvt.skurkoandroidpvt.dz6.Dz6StudentListAdapter
 import by.itacademy.pvt.skurkoandroidpvt.dz6.Student
-import by.itacademy.pvt.skurkoandroidpvt.dz8.Dz8PrefManager
 import kotlinx.android.synthetic.main.fragment_student_list_dz8.*
 import java.util.Timer
 import kotlin.concurrent.schedule
 
 class Dz11ListFragment : Fragment(), Dz6StudentListAdapter.ClickListener, Dz11ListView {
 
-    private lateinit var prefManager: Dz8PrefManager
     private lateinit var dz6Adapter: Dz6StudentListAdapter
     private lateinit var presenter: Dz11ListPresenter
     private var searchText: String = ""
@@ -35,8 +33,10 @@ class Dz11ListFragment : Fragment(), Dz6StudentListAdapter.ClickListener, Dz11Li
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+
         presenter = Dz11ListPresenter()
         presenter.setView(this)
+        presenter.setContext(view.context)
 
         val recycleView = view.findViewById<RecyclerView>(R.id.dz8_recycler)
         recycleView.setHasFixedSize(true)
@@ -50,6 +50,8 @@ class Dz11ListFragment : Fragment(), Dz6StudentListAdapter.ClickListener, Dz11Li
         }
 
         presenter.loadStudentList()
+
+        presenter.initPrefsManager(searchStudent)
 
         searchStudent.addTextChangedListener(object : TextWatcher {
 
@@ -83,24 +85,9 @@ class Dz11ListFragment : Fragment(), Dz6StudentListAdapter.ClickListener, Dz11Li
         dz6Adapter.updateList(list)
     }
 
-    override fun onActivityCreated(savedInstanceState: Bundle?) {
-        super.onActivityCreated(savedInstanceState)
-        prefManager = Dz8PrefManager(requireContext())
-    }
-
     override fun onPause() {
         super.onPause()
-        prefManager.saveUserText(searchText)
-    }
-
-    override fun onResume() {
-        super.onResume()
-        val savedText = prefManager.getUserText()
-        if (savedText != searchText) {
-            searchText = savedText
-            searchStudent.setText(savedText)
-            updateRecycle()
-        }
+        presenter.saveSearchingText(searchText)
     }
 
     override fun onAttach(context: Context) {
