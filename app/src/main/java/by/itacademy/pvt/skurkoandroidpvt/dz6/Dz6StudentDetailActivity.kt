@@ -28,18 +28,18 @@ class Dz6StudentDetailActivity : Activity() {
 
         val itemId = intent.getStringExtra(ITEM_ID)
         val item = StudentManager.getStudent(itemId)
-        val avatarImageView = findViewById<ImageView>(R.id.dz6_detail_image)
+        val avatarImageView = findViewById<ImageView>(R.id.dz6DetailImage)
 
         if (item != null) {
             loadCircularImage(item.imageUrl, avatarImageView)
-            dz6_detail_name.text = item.name
-            dz6_detail_age.text = item.age.toString()
+            dz6DetailName.text = item.name
+            dz6DetailAge.text = item.age.toString()
         } else {
             startActivity(Intent(this, Dz6StudentListActivity::class.java))
             finish()
         }
 
-        dz6_detail_edit.setOnClickListener {
+        dz6DetailEdit.setOnClickListener {
             if (item == null) {
                 Toast.makeText(this@Dz6StudentDetailActivity, R.string.dz6_wrong_id, Toast.LENGTH_SHORT).show()
             } else {
@@ -48,7 +48,7 @@ class Dz6StudentDetailActivity : Activity() {
             finish()
         }
 
-        dz6_detail_delete.setOnClickListener {
+        dz6DetailDelete.setOnClickListener {
             if (item == null) {
                 Toast.makeText(this@Dz6StudentDetailActivity, R.string.dz6_wrong_id, Toast.LENGTH_SHORT).show()
             } else {

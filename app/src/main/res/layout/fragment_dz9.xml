@@ -4,14 +4,14 @@
               android:layout_width="match_parent"
               android:layout_height="match_parent">
 
-    <TextView android:id="@+id/dz9_list_title"
+    <TextView android:id="@+id/dz9ListTitle"
               android:layout_width="match_parent"
               android:layout_height="wrap_content"
               style="@style/Dz9_list_title"
               android:text="@string/car_list"/>
 
     <androidx.recyclerview.widget.RecyclerView
-            android:id="@+id/dz9_recycler"
+            android:id="@+id/dz9Recycler"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:background="@color/colorPrimaryDark"

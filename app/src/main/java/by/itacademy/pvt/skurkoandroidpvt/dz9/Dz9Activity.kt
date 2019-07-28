@@ -33,10 +33,6 @@ class Dz9Activity : FragmentActivity(), OnMapReadyCallback, Dz9Fragment.Listener
 
     private lateinit var carPoint: Bitmap
 
-    companion object {
-        private const val LOCATION_PERMISSION_REQUEST_CODE = 1
-    }
-
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_dz9)

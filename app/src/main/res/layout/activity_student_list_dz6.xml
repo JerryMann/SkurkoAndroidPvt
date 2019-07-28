@@ -21,7 +21,7 @@
             android:layout_height="match_parent">
 
         <androidx.recyclerview.widget.RecyclerView
-                android:id="@+id/dz6_recycler"
+                android:id="@+id/dz6Recycler"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:background="@android:color/black"
@@ -29,7 +29,7 @@
                 android:paddingBottom="50dp"/>
 
         <com.google.android.material.floatingactionbutton.FloatingActionButton
-                android:id="@+id/dz6_add_student"
+                android:id="@+id/dz6AddStudent"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="end|bottom"

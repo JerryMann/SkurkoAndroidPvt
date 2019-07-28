@@ -11,7 +11,7 @@ class Dz5DiagramActivity : Activity() {
         setContentView(R.layout.activity_dz5_diagram)
 
         val dataSample = floatArrayOf(26f, 12f, 10f, 40f, 22f)
-        val diagramView = findViewById<Dz5DiagramView>(R.id.dz5_diagram_view)
+        val diagramView = findViewById<Dz5DiagramView>(R.id.dz5DiagramView)
 
         diagramView.diagramValues = dataSample
     }

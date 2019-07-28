@@ -33,7 +33,7 @@
                         android:layout_width="150dp"
                         android:layout_height="150dp"/>
                 <TextView
-                        android:id="@+id/avatar_name"
+                        android:id="@+id/avatarName"
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
                         android:fontFamily="@font/monda_bold"
@@ -78,21 +78,21 @@
                     android:layout_height="wrap_content">
                 <TextView
                         style="@style/ProfileNumbers"
-                        android:id="@+id/trophies_number"
+                        android:id="@+id/trophiesNumber"
                         android:layout_width="0dp"
                         android:layout_weight="1"
                         android:layout_height="wrap_content"
                         android:text="@string/_3"/>
                 <TextView
                         style="@style/ProfileNumbers"
-                        android:id="@+id/following_number"
+                        android:id="@+id/followingNumber"
                         android:layout_width="0dp"
                         android:layout_weight="1"
                         android:layout_height="wrap_content"
                         android:text="@string/_50"/>
                 <TextView
                         style="@style/ProfileNumbers"
-                        android:id="@+id/followers_number"
+                        android:id="@+id/followersNumber"
                         android:layout_width="0dp"
                         android:layout_weight="1"
                         android:layout_height="wrap_content"
@@ -100,7 +100,7 @@
             </LinearLayout>
 
             <LinearLayout
-                    android:id="@+id/central_line"
+                    android:id="@+id/centralLine"
                     android:layout_marginLeft="5dp"
                     android:layout_marginRight="5dp"
                     android:orientation="horizontal"
@@ -160,27 +160,27 @@
                         android:text="@string/name_value"/>
                 <TextView
                         style="@style/ProfileValues"
-                        android:id="@+id/country_value"
+                        android:id="@+id/countryValue"
                         android:text="@string/country_value"/>
                 <TextView
                         style="@style/ProfileValues"
-                        android:id="@+id/postal_value"
+                        android:id="@+id/postalValue"
                         android:text="@string/postal_value"/>
                 <TextView
                         style="@style/ProfileValues"
-                        android:id="@+id/birth_value"
+                        android:id="@+id/birthValue"
                         android:text="@string/birth_value"/>
                 <TextView
                         style="@style/ProfileValues"
-                        android:id="@+id/gender_value"
+                        android:id="@+id/genderValue"
                         android:text="@string/gender_value"/>
                 <TextView
                         style="@style/ProfileValues"
-                        android:id="@+id/height_value"
+                        android:id="@+id/heightValue"
                         android:text="@string/height_value"/>
                 <TextView
                         style="@style/ProfileValues"
-                        android:id="@+id/phone_value"
+                        android:id="@+id/phoneValue"
                         android:text="@string/phone_value"/>
             </LinearLayout>
 

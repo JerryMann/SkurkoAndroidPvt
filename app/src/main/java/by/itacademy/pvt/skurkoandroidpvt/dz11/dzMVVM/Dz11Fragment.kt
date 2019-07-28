@@ -23,7 +23,7 @@ class Dz11Fragment : Fragment(), Dz9Adapter.ClickListener {
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
-        val recyclerView = view.findViewById<RecyclerView>(R.id.dz9_recycler)
+        val recyclerView = view.findViewById<RecyclerView>(R.id.dz9Recycler)
         recyclerView.setHasFixedSize(true)
         recyclerView.layoutManager = LinearLayoutManager(context)
 

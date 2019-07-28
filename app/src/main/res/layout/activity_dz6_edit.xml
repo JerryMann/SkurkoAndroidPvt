@@ -15,7 +15,7 @@
             android:layout_height="wrap_content"/>
 
     <EditText
-            android:id="@+id/dz6_urlEditText"
+            android:id="@+id/dz6UrlEditText"
             style="@style/LoginEditName"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -33,7 +33,7 @@
             android:layout_height="wrap_content"/>
 
     <EditText
-            android:id="@+id/dz6_nameEditText"
+            android:id="@+id/dz6NameEditText"
             style="@style/LoginEditName"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -51,7 +51,7 @@
             android:layout_height="wrap_content"/>
 
     <EditText
-            android:id="@+id/dz6_ageEditText"
+            android:id="@+id/dz6AgeEditText"
             style="@style/LoginEditName"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -61,7 +61,7 @@
 
     <Button
             android:layout_gravity="center"
-            android:id="@+id/dz6_edit_save"
+            android:id="@+id/dz6EditSave"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:background="@color/colorAccent"

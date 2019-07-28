@@ -42,15 +42,15 @@ class Dz8EditFragment : Fragment() {
         val studentId = arguments?.getString(ID_KEY, null)
         val item: Student? = studentId?.let { StudentManager.getStudent(it) }
         if (item != null) {
-            dz8_urlEditText.setText(item.imageUrl)
-            dz8_nameEditText.setText(item.name)
-            dz8_ageEditText.setText(item.age.toString())
+            dz8UrlEditText.setText(item.imageUrl)
+            dz8NameEditText.setText(item.name)
+            dz8AgeEditText.setText(item.age.toString())
         }
 
-        dz8_edit_save.setOnClickListener {
-            val newUrl = dz8_urlEditText.text.toString().trim()
-            val newName = dz8_nameEditText.text.toString().trim()
-            val newAge = dz8_ageEditText.text.toString().toIntOrNull()
+        dz8EditSave.setOnClickListener {
+            val newUrl = dz8UrlEditText.text.toString().trim()
+            val newName = dz8NameEditText.text.toString().trim()
+            val newAge = dz8AgeEditText.text.toString().toIntOrNull()
 
             if (newUrl.isEmpty() ||
                 newName.isEmpty() ||

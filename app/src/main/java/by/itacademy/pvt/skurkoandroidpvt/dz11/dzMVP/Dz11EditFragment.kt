@@ -45,10 +45,10 @@ class Dz11EditFragment : Fragment(), Dz11EditView {
         if (studentId != null)
             presenter.loadStudent(studentId)
 
-        dz8_edit_save.setOnClickListener {
-            val newUrl = dz8_urlEditText
-            val newName = dz8_nameEditText
-            val newAge = dz8_ageEditText
+        dz8EditSave.setOnClickListener {
+            val newUrl = dz8UrlEditText
+            val newName = dz8NameEditText
+            val newAge = dz8AgeEditText
 
             presenter.saveStudent(studentId, newUrl, newName, newAge)
             clickListener?.onSaveClicked()
@@ -62,9 +62,9 @@ class Dz11EditFragment : Fragment(), Dz11EditView {
 
     override fun showStudent(student: Student?) {
         if (student != null) {
-            dz8_urlEditText.setText(student.imageUrl)
-            dz8_nameEditText.setText(student.name)
-            dz8_ageEditText.setText(student.age.toString())
+            dz8UrlEditText.setText(student.imageUrl)
+            dz8NameEditText.setText(student.name)
+            dz8AgeEditText.setText(student.age.toString())
         }
     }
 

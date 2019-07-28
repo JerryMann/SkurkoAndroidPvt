@@ -9,8 +9,8 @@ import by.itacademy.pvt.skurkoandroidpvt.utils.loadCircularImage
 
 class Dz6StudentListViewHolder(view: View) : RecyclerView.ViewHolder(view) {
 
-    private val imageStudent = itemView.findViewById<ImageView>(R.id.student_avatar)
-    private val nameStudent = itemView.findViewById<TextView>(R.id.student_name)
+    private val imageStudent = itemView.findViewById<ImageView>(R.id.studentAvatar)
+    private val nameStudent = itemView.findViewById<TextView>(R.id.studentName)
 
     fun bind(item: Student) {
         loadCircularImage(item.imageUrl, imageStudent)

@@ -29,16 +29,16 @@ class Dz6StudentEditActivity : Activity() {
         val itemId = intent.getStringExtra(ITEM_ID)
         val item: Student? = itemId?.let { StudentManager.getStudent(it) }
         if (item != null) {
-            dz6_urlEditText.setText(item.imageUrl)
-            dz6_nameEditText.setText(item.name)
-            dz6_ageEditText.setText(item.age.toString())
+            dz6UrlEditText.setText(item.imageUrl)
+            dz6NameEditText.setText(item.name)
+            dz6AgeEditText.setText(item.age.toString())
         }
 
-        dz6_edit_save.setOnClickListener {
+        dz6EditSave.setOnClickListener {
 
-            val newUrl = dz6_urlEditText.text.toString().trim()
-            val newName = dz6_nameEditText.text.toString().trim()
-            val newAge = dz6_ageEditText.text.toString().toIntOrNull()
+            val newUrl = dz6UrlEditText.text.toString().trim()
+            val newName = dz6NameEditText.text.toString().trim()
+            val newAge = dz6AgeEditText.text.toString().toIntOrNull()
 
             if (newUrl.isEmpty() ||
                 newName.isEmpty() ||

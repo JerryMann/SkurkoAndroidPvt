@@ -40,15 +40,15 @@ class Dz8DetailFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         val studentId = arguments?.getString(ID_KEY, null)
         val student: Student? = studentId?.let { StudentManager.getStudent(it) }
-        val avatarImageView = view.findViewById<ImageView>(R.id.dz8_detail_image)
+        val avatarImageView = view.findViewById<ImageView>(R.id.dz8DetailImage)
 
         if (student != null) {
             context?.let { loadCircularImage(student.imageUrl, avatarImageView) }
-            dz8_detail_name.text = student.name
-            dz8_detail_age.text = student.age.toString()
+            dz8DetailName.text = student.name
+            dz8DetailAge.text = student.age.toString()
         }
 
-        dz8_detail_delete.setOnClickListener {
+        dz8DetailDelete.setOnClickListener {
             if (student == null) {
                 Toast.makeText(context, R.string.dz6_wrong_id, Toast.LENGTH_SHORT).show()
             } else {
@@ -57,7 +57,7 @@ class Dz8DetailFragment : Fragment() {
             clickListener?.onDeleteClicked()
         }
 
-        dz8_detail_edit.setOnClickListener {
+        dz8DetailEdit.setOnClickListener {
             if (student == null) {
                 Toast.makeText(context, R.string.dz6_wrong_id, Toast.LENGTH_SHORT).show()
             } else {

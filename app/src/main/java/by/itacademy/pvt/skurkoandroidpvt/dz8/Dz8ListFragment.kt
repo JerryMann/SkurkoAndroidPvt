@@ -34,13 +34,13 @@ class Dz8ListFragment : Fragment(), Dz6StudentListAdapter.ClickListener {
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
-        val recycleView = view.findViewById<RecyclerView>(R.id.dz8_recycler)
+        val recycleView = view.findViewById<RecyclerView>(R.id.dz8Recycler)
         recycleView.setHasFixedSize(true)
         recycleView.layoutManager = LinearLayoutManager(context)
         dz6Adapter = Dz6StudentListAdapter(StudentManager.getStudentList(), this)
         recycleView.adapter = dz6Adapter
 
-        dz8_add_student.setOnClickListener {
+        dz8AddStudent.setOnClickListener {
             clickListener?.onPlusClicked()
         }
 

@@ -47,13 +47,13 @@ class Dz11DetailFragment : Fragment(), Dz11DetailView {
             activity?.supportFragmentManager?.popBackStack()
         }
 
-        dz8_detail_delete.setOnClickListener {
+        dz8DetailDelete.setOnClickListener {
             if (studentId != null)
                 presenter.deleteStudent(studentId)
             clickListener?.onDeleteClicked()
         }
 
-        dz8_detail_edit.setOnClickListener {
+        dz8DetailEdit.setOnClickListener {
             if (studentId != null)
                 clickListener?.onEditClicked(studentId)
         }
@@ -61,9 +61,9 @@ class Dz11DetailFragment : Fragment(), Dz11DetailView {
 
     override fun showStudent(student: Student?) {
         if (student != null) {
-            context?.let { loadCircularImage(student.imageUrl, dz8_detail_image) }
-            dz8_detail_name.text = student.name
-            dz8_detail_age.text = student.age.toString()
+            context?.let { loadCircularImage(student.imageUrl, dz8DetailImage) }
+            dz8DetailName.text = student.name
+            dz8DetailAge.text = student.age.toString()
         }
     }
 

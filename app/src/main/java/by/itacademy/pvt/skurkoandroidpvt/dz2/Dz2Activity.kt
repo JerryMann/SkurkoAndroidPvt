@@ -20,17 +20,17 @@ class Dz2Activity : Activity() {
         val url = text.text
 
         button.setOnClickListener {
-            progress_circular.visibility = View.VISIBLE
+            progressCircular.visibility = View.VISIBLE
             Picasso.get()
                 .load(url.toString())
                 .transform(Circular())
                 .into(imageView, object : Callback {
                     override fun onSuccess() {
-                        progress_circular.visibility = View.GONE
+                        progressCircular.visibility = View.GONE
                     }
 
                     override fun onError(e: Exception?) {
-                        progress_circular.visibility = View.GONE
+                        progressCircular.visibility = View.GONE
                         imageView.background = getDrawable(R.drawable.error_image_icon_23)
                     }
                 })

@@ -7,12 +7,12 @@
 
     <ImageView
             android:contentDescription="@string/student_s_avatar"
-            android:id="@+id/student_avatar"
+            android:id="@+id/studentAvatar"
             android:layout_width="150dp"
             android:layout_height="150dp" />
 
     <TextView
-            android:id="@+id/student_name"
+            android:id="@+id/studentName"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_gravity="center"

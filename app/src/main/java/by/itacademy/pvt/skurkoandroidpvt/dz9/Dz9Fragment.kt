@@ -26,7 +26,7 @@ class Dz9Fragment : Fragment(), Dz9Adapter.ClickListener {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         val carListAdapter = Dz9Adapter(emptyList(), this)
 
-        val recyclerView = view.findViewById<RecyclerView>(R.id.dz9_recycler)
+        val recyclerView = view.findViewById<RecyclerView>(R.id.dz9Recycler)
         recyclerView.setHasFixedSize(true)
         recyclerView.layoutManager = LinearLayoutManager(context)
 

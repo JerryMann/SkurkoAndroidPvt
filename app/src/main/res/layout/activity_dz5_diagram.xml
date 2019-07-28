@@ -5,7 +5,7 @@
              android:background="@color/colorMain">
 
     <by.itacademy.pvt.skurkoandroidpvt.dz5.Dz5DiagramView
-            android:id="@+id/dz5_diagram_view"
+            android:id="@+id/dz5DiagramView"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"/>
 

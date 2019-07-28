@@ -20,7 +20,7 @@ class Dz6StudentListActivity : Activity(), Dz6StudentListAdapter.ClickListener {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_student_list_dz6)
 
-        val recycleView = findViewById<RecyclerView>(R.id.dz6_recycler)
+        val recycleView = findViewById<RecyclerView>(R.id.dz6Recycler)
         recycleView.setHasFixedSize(true)
         recycleView.layoutManager = LinearLayoutManager(this)
         dz6Adapter = Dz6StudentListAdapter(StudentManager.getStudentList(), this)
@@ -48,7 +48,7 @@ class Dz6StudentListActivity : Activity(), Dz6StudentListAdapter.ClickListener {
             }
         })
 
-        dz6_add_student.setOnClickListener {
+        dz6AddStudent.setOnClickListener {
             startActivity(Dz6StudentEditActivity.getIntent(this@Dz6StudentListActivity, ""))
             finish()
         }
