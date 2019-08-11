@@ -6,6 +6,7 @@ class Dz12ListPresenter {
 
     private var view: Dz12ListView? = null
     private lateinit var prefsManager: Dz8PrefManager
+    private var searchText: String = ""
 
     fun setView(view: Dz12ListView?) {
         this.view = view
@@ -17,6 +18,21 @@ class Dz12ListPresenter {
         if (studentList.isEmpty()) {
             view?.progressBarOn()
             Dz12StudentManager.loadStudentList(object : Callback() {
+                override fun returnResult() {
+                    view?.progressBarOff()
+                    view?.updateDatabase()
+                }
+            })
+        }
+        return studentList
+    }
+
+    fun getStudentsByFilterName(name: String): List<Student> {
+        val studentList = Dz12StudentManager.getStudentList()
+        searchText = name
+        if (studentList.isEmpty()) {
+            view?.progressBarOn()
+            Dz12StudentManager.searchByName(searchText, object : Callback() {
                 override fun returnResult() {
                     view?.progressBarOff()
                     view?.updateDatabase()

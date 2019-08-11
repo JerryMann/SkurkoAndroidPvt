@@ -27,7 +27,7 @@ class Dz12EditPresenter {
             if (id.isBlank()) {
                 saveNewStudent(urlLink, name, age!!)
             } else {
-                updateStudent(urlLink, name, age!!, id)
+                updateStudent(id, urlLink, name, age!!)
             }
         } else {
             view?.showErrorToast()
@@ -52,7 +52,7 @@ class Dz12EditPresenter {
         return isEnterRight
     }
 
-    private fun updateStudent(urlLink: String, name: String, age: Int, id: String) {
+    private fun updateStudent(id: String, urlLink: String, name: String, age: Int) {
         val newStudent = Student(id, urlLink, name, age)
         Dz12StudentManager.updateStudent(newStudent)
         view?.backToMainFragment()

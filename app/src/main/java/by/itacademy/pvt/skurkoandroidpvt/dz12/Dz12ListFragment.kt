@@ -106,6 +106,7 @@ class Dz12ListFragment : Fragment(), Dz12ListView, Dz12Adapter.ClickListener {
     fun updateList() {
         val text = searchStudent.text.toString()
         adapter.giveStudentListBySearch(presenter.getSearchList(text))
+        presenter.getStudentsByFilterName(text)
     }
 
     interface Listener {

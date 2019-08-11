@@ -17,6 +17,13 @@ interface StudentApi {
         @Query("pageSize") pageSize: Int
     ): Observable<MutableList<Student>>
 
+    @GET("data/student")
+    fun getStudentsByFilterName(
+        @Query("pageSize") pageSize: Int,
+        @Query("offset") offset: Int,
+        @Query("where") condition: String
+    ): Observable<MutableList<Student>>
+
     @POST("data/student")
     fun saveStudent(
         @Body student: Student

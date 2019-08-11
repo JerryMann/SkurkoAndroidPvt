@@ -9,6 +9,8 @@ object Dz12StudentManager {
 
     private var studentsList: MutableList<Student> = mutableListOf()
 
+    private var searchText: String = ""
+
     private val repository = provideStudentRepository()
     private var disposable: Disposable? = null
 
@@ -17,6 +19,18 @@ object Dz12StudentManager {
     fun loadStudentList(callback: Callback) {
         disposable = repository
             .getAll(PAGE_SIZE)
+            .subscribeOn(Schedulers.io())
+            .observeOn(AndroidSchedulers.mainThread())
+            .subscribe {
+                studentsList = it
+                callback.returnResult()
+            }
+    }
+
+    fun searchByName(name: String, callback: Callback) {
+        searchText = name
+        disposable = repository
+            .getByFilterName(name, PAGE_SIZE, 0)
             .subscribeOn(Schedulers.io())
             .observeOn(AndroidSchedulers.mainThread())
             .subscribe {

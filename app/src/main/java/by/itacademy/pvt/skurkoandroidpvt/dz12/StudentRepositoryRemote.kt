@@ -9,6 +9,10 @@ class StudentRepositoryRemote(private val api: StudentApi) : StudentRepository {
         return api.getAllStudents(pageSize)
     }
 
+    override fun getByFilterName(name: String, pageSize: Int, offset: Int): Observable<MutableList<Student>> {
+        return api.getStudentsByFilterName(pageSize, offset, "name LIKE '%$name%'")
+    }
+
     override fun saveNewStudent(student: Student): Observable<Student> {
         return api.saveStudent(student)
     }
