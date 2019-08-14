@@ -70,5 +70,10 @@
                 android:id="@+id/button13"
                 android:text="@string/dz11_mvvm"/>
 
+        <Button
+                style="@style/MenuButton"
+                android:id="@+id/button14"
+                android:text="@string/dz12"/>
+
     </LinearLayout>
 </ScrollView>

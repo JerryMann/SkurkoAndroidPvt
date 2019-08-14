@@ -38,7 +38,9 @@
         <activity android:name=".dz11.dzMVVM.Dz11Activity"/>
         <activity android:name=".dzMenu.DzMenu"/>
         <activity android:name=".dz13.Dz13Activity"/>
-        <activity android:name=".dz13.dz13cars.Dz13CarActivity">
+        <activity android:name=".dz13.dz13cars.Dz13CarActivity"/>
+        <activity android:name=".dz12.Dz12Activity"/>
+        <activity android:name=".dzMenu.DzMenu">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN"/>
 

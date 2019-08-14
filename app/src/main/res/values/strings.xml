@@ -71,5 +71,6 @@
     <string name="dz11_mvp">DZ11 MVP</string>
     <string name="dz11_mvvm">DZ11 MVVM</string>
     <string name="dz11_error">Input valid data</string>
+    <string name="dz12">dz12</string>
 
 </resources>

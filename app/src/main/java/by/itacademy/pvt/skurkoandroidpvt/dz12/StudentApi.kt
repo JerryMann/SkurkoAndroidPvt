@@ -1,0 +1,42 @@
+package by.itacademy.pvt.skurkoandroidpvt.dz12
+
+import io.reactivex.Completable
+import io.reactivex.Observable
+import retrofit2.http.Body
+import retrofit2.http.DELETE
+import retrofit2.http.GET
+import retrofit2.http.POST
+import retrofit2.http.PUT
+import retrofit2.http.Path
+import retrofit2.http.Query
+
+interface StudentApi {
+
+    @GET("data/student")
+    fun getAllStudents(
+        @Query("pageSize") pageSize: Int
+    ): Observable<MutableList<Student>>
+
+    @GET("data/student")
+    fun getStudentsByFilterName(
+        @Query("pageSize") pageSize: Int,
+        @Query("offset") offset: Int,
+        @Query("where") condition: String
+    ): Observable<MutableList<Student>>
+
+    @POST("data/student")
+    fun saveStudent(
+        @Body student: Student
+    ): Observable<Student>
+
+    @PUT("data/student/{objectId}")
+    fun updateStudent(
+        @Path("objectId") id: String,
+        @Body student: Student
+    ): Completable
+
+    @DELETE("data/student/{objectId}")
+    fun deleteStudent(
+        @Path("objectId") id: String
+    ): Completable
+}
