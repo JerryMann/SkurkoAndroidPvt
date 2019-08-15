@@ -9,6 +9,8 @@ import by.itacademy.pvt.skurkoandroidpvt.dz1.Dz1Activity
 import by.itacademy.pvt.skurkoandroidpvt.dz11.dzMVP.Dz11StudentListActivity
 import by.itacademy.pvt.skurkoandroidpvt.dz11.dzMVVM.Dz11Activity
 import by.itacademy.pvt.skurkoandroidpvt.dz12.Dz12Activity
+import by.itacademy.pvt.skurkoandroidpvt.dz13.Dz13Activity
+import by.itacademy.pvt.skurkoandroidpvt.dz13.dz13cars.Dz13CarActivity
 import by.itacademy.pvt.skurkoandroidpvt.dz2.Dz2Activity
 import by.itacademy.pvt.skurkoandroidpvt.dz2.Dz2ClassworkActivity
 import by.itacademy.pvt.skurkoandroidpvt.dz3.Dz3Activity
@@ -80,6 +82,14 @@ class DzMenu : Activity() {
 
         button14.setOnClickListener {
             startActivity(Intent(this, Dz12Activity::class.java))
+        }
+
+        button15.setOnClickListener {
+            startActivity(Intent(this, Dz13Activity::class.java))
+        }
+
+        button16.setOnClickListener {
+            startActivity(Intent(this, Dz13CarActivity::class.java))
         }
     }
 }
