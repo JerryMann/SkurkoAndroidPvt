@@ -9,7 +9,7 @@ class Dz13Test {
     private val test = Dz13Extra()
 
     @Test
-    fun testCheckWin() {
+    fun successCheckWin() {
         assertEquals(
             1, test.checkWin(
                 listOf(
@@ -21,7 +21,10 @@ class Dz13Test {
                 listOf("orange", "apple", "apple", "banana", "orange", "apple", "banana")
             )
         )
+    }
 
+    @Test
+    fun failureCheckWin() {
         assertEquals(
             0, test.checkWin(
                 listOf(
